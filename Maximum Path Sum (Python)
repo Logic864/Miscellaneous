@@ -1,12 +1,15 @@
 mArr = []
 
-#Create Triangle
+#Create Triangle as a list of lists
 with open("yPuzzle", "r") as yPuz:
     for line in yPuz:
         int_list = [int(i) for i in line.split()]
         mArr.append(int_list)
 
+#Make the solution equal to the number at the top of the triangle
 solution = mArr[0][0]
+
+#Variable for holding index
 tempI = 0
 
 for lists in range(1, len(mArr)):
